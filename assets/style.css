@@ -1,68 +1,69 @@
-/* Fonte base */
-body {
-    font-family: "Roboto Mono", monospace;
-    background-color: #ffffff;
-    margin: 0;
-    padding: 0;
+:root {
+    --text-color: #cad1da;
+    --card-front-color: #699ddd;
+    --card-back-color: #000000;
 }
 
-/* Container principal */
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+body {
+    background: url('img/bg-desktop.webp');
+    font-family: Bai Jamjuree;
 }
 
 #container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    max-width: 800px;
-    width: 100%;
-    padding: 1rem;
+    display: flex; 
 }
 
-/* Cartões */
 .cartao {
-    background-color: #b3b3b3;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
-    transition: transform 0.3s;
+    margin: 1rem 1rem;
+    height: 20rem;
+    flex-grow: 1;
+    flex-basis: calc(33% - 6rem);
 }
 
-.cartao:hover {
-    transform: scale(1.02);
-}
-
-/* Título */
-.cartao h3 {
-    margin-top: 0;
-    color: #3e4ccc;
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-}
-
-/* Pergunta */
-.cartao__conteudo__pergunta p {
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 0.5rem;
-}
-
-/* Resposta */
-.cartao__conteudo__resposta p {
-    color: #000000;
-    line-height: 1.6;
-}
-
-/* Rodapé */
-footer {
+.cartao__conteudo {
+    background-color: var(--card-front-color);
     text-align: center;
-    padding: 1rem;
-    background-color: #eaeaea;
-    font-size: 0.875rem;
-    color: #000000;
-    margin-top: 2rem;
+    /* background-color: aquamarine; */
+    height: 100%;
+}
+
+.cartao__conteudo h3 {
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    text-align: left;
+    padding: 0.5rem;
+    position: absolute;
+    margin: 0.6rem;
+    border-radius: 0.6rem;
+    font-size: 1vw;
+}
+
+.cartao__conteudo p {
+    margin-top: 1rem;
+    padding: 2rem;
+}
+
+.cartao__conteudo__pergunta p {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.cartao__conteudo__resposta p {
+    color: var(--card-back-color);
+    font-weight: 700;
+}
+
+footer {
+    background-color: black;
+    color: rgb(112, 112, 112);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2rem;
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.6rem;
+    margin-top: 0.5rem;
 }
