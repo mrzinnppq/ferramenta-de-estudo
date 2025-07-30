@@ -32,7 +32,7 @@ body {
 .cartao__conteudo h3 {
     color: var(--text-color);
     border: 1px solid var(--text-color);
-    text-align: left;
+    text-align: left;O JavaScript é uma linguagem de programação
     padding: 0.5rem;
     position: absolute;
     margin: 0.6rem;
@@ -40,7 +40,7 @@ body {
     font-size: 1vw;
     backface-visibility: hidden;
 }
-
+O JavaScript é uma linguagem de programação
 .cartao__conteudo p {
     margin-top: 1rem;
     padding: 2rem;
@@ -85,8 +85,8 @@ body {
 
 
 footer {
-    background-color: black;
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 0, 0);
     position: fixed;
     bottom: 0;
     width: 100%;
