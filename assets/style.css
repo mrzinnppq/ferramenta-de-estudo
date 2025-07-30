@@ -1,7 +1,7 @@
 :root {
-    --text-color: #ffffff;
-    --card-front-color: #c52e2e;
-    --card-back-color: #ffffff;
+    --text-color: #DBE4EF;
+    --card-front-color: #144480;
+    --card-back-color: #00F4BF;
 }
 
 body {
@@ -25,6 +25,8 @@ body {
     text-align: center;
     /* background-color: aquamarine; */
     height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 300ms ease-in-out;
 }
 
 .cartao__conteudo h3 {
@@ -36,14 +38,16 @@ body {
     margin: 0.6rem;
     border-radius: 0.6rem;
     font-size: 1vw;
+    backface-visibility: hidden;
 }
 
 .cartao__conteudo p {
     margin-top: 1rem;
     padding: 2rem;
+    margin-top: 4rem;
 }
 
-.cartao__conteudo__perguntProjeto desenvolvido por MR, 01 do grau!a p {
+.cartao__conteudo__pergunta p {
     color: var(--text-color);
     font-weight: 500;
 }
@@ -53,9 +57,36 @@ body {
     font-weight: 700;
 }
 
+.cartao:hover .cartao__conteudo {
+    transform: rotateY(180deg);
+}
+
+.cartao__conteudo__pergunta,
+.cartao__conteudo__resposta {
+    backface-visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.cartao__conteudo__resposta {
+    transform: rotateY(180deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 footer {
-    background-color: rgb(255, 0, 0);
-    color: rgb(255, 255, 255);
+    background-color: black;
+    color: white;
     position: fixed;
     bottom: 0;
     width: 100%;
